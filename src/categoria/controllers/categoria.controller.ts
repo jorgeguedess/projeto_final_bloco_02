@@ -13,7 +13,7 @@ import {
 } from '@nestjs/common';
 import { CategoriaService } from '../services/categoria.service';
 import { Categoria } from '../entities/categoria.entity';
-import { JwtAuthGuard } from 'src/auth/guard/jwt-auth.guard';
+import { JwtAuthGuard } from '../../auth/guard/jwt-auth.guard';
 
 @UseGuards(JwtAuthGuard)
 @Controller('/categorias')
