@@ -7,8 +7,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
-    .setTitle('Blog Pessoal')
-    .setDescription('Projeto Blog Pessoal')
+    .setTitle('Farmácia')
+    .setDescription('Projeto Farmácia')
     .setContact(
       'Jorge Guedes',
       'https://www.linkedin.com/in/jorgeguedess/',
