@@ -5,6 +5,9 @@ import { CategoriaModule } from './categoria/categoria.module';
 import { Categoria } from './categoria/entities/categoria.entity';
 import { ProdutoModule } from './produto/produto.module';
 import { Produto } from './produto/entities/produto.entity';
+import { AuthModule } from './auth/auth.module';
+import { UsuarioModule } from './usuario/usuario.module';
+import { Usuario } from './usuario/entities/usuario.entity';
 
 @Module({
   imports: [
@@ -19,11 +22,13 @@ import { Produto } from './produto/entities/produto.entity';
       username: process.env.DB_USERNAME,
       password: process.env.DB_PASSWORD,
       database: 'db_farmacia',
-      entities: [Categoria, Produto],
+      entities: [Categoria, Produto, Usuario],
       synchronize: true,
     }),
     CategoriaModule,
     ProdutoModule,
+    AuthModule,
+    UsuarioModule,
   ],
   controllers: [],
   providers: [],
